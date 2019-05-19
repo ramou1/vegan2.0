@@ -1,0 +1,23 @@
+<ion-content padding color="secondary">
+
+    <ion-list style="margin-top: 6.3vh">
+      
+      <img src="../assets/imgs/brasao_branco.png" style="width: 55%;" class="center">
+
+        <ion-item>
+          <ion-icon name="mail" item-start color="primary"></ion-icon>
+          <ion-input type="text" name="login" required placeholder="Usuário"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-icon name="lock" item-start color="primary"></ion-icon>
+          <ion-input type="password" name="senha" required placeholder="Senha"></ion-input>
+        </ion-item> 
+       
+      <div text-center>
+          <button ion-button secondary class="login-button" (click)="fazerLogin()" full>Entrar</button>
+      </div>
+  
+    </ion-list>
+  
+  </ion-content>
