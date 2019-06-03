@@ -1,3 +1,43 @@
 page-profile {
+    .item-md ion-avatar {
+        min-width: 70px !important;
+        min-height: 70px !important;
+        img {
+            width: 70px !important;
+            height: 70px !important;
+        }
+    }
 
+    .item-md {
+        background-color: transparent;
+        padding-left: 0 !important;
+    }
+    
+    ion-slides {
+        height: 25%;
+    }
+
+    .card-header-md {
+        padding: 7px;
+    }
+
+    .card-content-md {
+        padding: 8px 6px;
+    }
+
+    .slide-zoom {
+        width: 110%;
+    }
+
+    .bar-button-md {
+        font-size: 2.3rem !important;
+    }
+ 
+    .thumb-img {
+        padding: 3px;
+    }
+
+    h6 {
+        line-height: 0.3rem !important;
+    }
 }

@@ -1,9 +1,52 @@
 <ion-header no-border>
   <ion-navbar>
-    <ion-title text-center>profile</ion-title>
+    <ion-title text-center style="margin-right: -35px;">meu perfil</ion-title>
+    <ion-buttons right>
+      <button ion-button right (click)="sair()">
+        <ion-icon name="exit" item-end color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+    <img src="../assets/imgs/advance-card-bttf.png" />
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3 class="align-vertical">
+        <ion-item> 
+          <ion-avatar item-start>
+            <img src="../assets/imgs/{{this.condutor.foto}}">
+          </ion-avatar>
+        </ion-item>
+      </ion-col>
+      <ion-col col-7 class="align-vertical">
+        <div style="margin-left: -35px !important;">
+          <h6>{{this.condutor.nome}}</h6>
+          <ion-note>{{this.condutor.empresa}}</ion-note>
+        </div>
+      </ion-col>
+      <ion-col col-2 class="align-vertical">
+        <div><ion-icon name="md-create" item-end color="secondary"></ion-icon></div>
+        <!-- <div><img src="../assets/imgs/Editar@2x.png" style="width: 70%;" (click)="editarPerfil()"></div> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h3>receitas</h3>
+  <ion-slides class="image-slider" loop="false" slidesPerView="3">
+    <ion-slide *ngFor="let img of images">
+        <ion-card>
+            <ion-card-header>
+              Card Header
+            </ion-card-header>
+            <ion-card-content>
+                <img src="../assets/imgs/{{img}}" class="thumb-img" imageViewer />
+            </ion-card-content>
+          </ion-card>
+    </ion-slide>
+  </ion-slides>
 
 </ion-content>
