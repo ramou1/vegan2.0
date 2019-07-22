@@ -1,7 +1,11 @@
 page-login {
 
+    .bgcolor {
+        background-color: map-get($colors, secondary);
+    }
+
     ion-item.item.item-block.item-md.item-input {
-        background-color: red;
+        border: 2px solid map-get($colors, secondary);
         padding: 0px 20px;
         margin: 1rem 0;
         border-radius: 10px;
@@ -11,7 +15,7 @@ page-login {
         height: 48px;
         border-radius: 10px;
         font-size: 1.8rem;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
 
     h1 {
@@ -25,6 +29,32 @@ page-login {
 
     .list-md .item-block .item-inner {
         border-bottom: 0 !important;
+    }
+
+    .inputholder{
+        ion-item{    
+            .passwordIcon{
+                z-index: 100 !important;
+            }
+        }
+    }
+
+    .list-md .item-block .item-inner {
+        border-bottom: 0 !important;
+    }
+
+    .button-md {
+        text-transform: inherit;
+    }
+
+    .button-inner {
+        justify-content: space-around !important;
+    }
+
+    .vertical-align-content > * {
+        display: flex!important;
+        align-content: center!important;
+        align-items: center!important;
     }
 
     .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child,

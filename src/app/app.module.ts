@@ -15,6 +15,11 @@ import { EventsPage } from '../pages/events/events';
 import { MapPage } from '../pages/map/map';
 import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
+import { ApiProvider } from '../providers/api/api';
+import { UtilsProvider } from '../providers/utils/utils';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -28,8 +33,14 @@ import { LoginPage } from '../pages/login/login';
     TabsPage
   ],
   imports: [
+    HttpClientModule,
+    HttpModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: '__vegan',
+         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +56,9 @@ import { LoginPage } from '../pages/login/login';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ApiProvider,
+    UtilsProvider
   ]
 })
 export class AppModule {}

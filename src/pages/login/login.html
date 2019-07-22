@@ -1,23 +1,23 @@
-<ion-content padding color="secondary">
+<ion-content padding class="bgcolor vertical-align-content">
 
-    <ion-list style="margin-top: 6.3vh">
-      
-      <img src="../assets/imgs/brasao_branco.png" style="width: 55%;" class="center">
+    <ion-list class="inputholder">
 
+        <img src="../assets/imgs/logo-app.png" style="width: 60%;" class="center">
+    
         <ion-item>
-          <ion-icon name="mail" item-start color="primary"></ion-icon>
-          <ion-input type="text" name="login" required placeholder="Usuário"></ion-input>
+          <ion-input type="text" name="login" required placeholder="Usuário" [(ngModel)]="user.usuario"></ion-input>
+          <ion-icon name="ios-contact" item-end color="primary"></ion-icon>
         </ion-item>
-      
+
         <ion-item>
-          <ion-icon name="lock" item-start color="primary"></ion-icon>
-          <ion-input type="password" name="senha" required placeholder="Senha"></ion-input>
-        </ion-item> 
-       
-      <div text-center>
+          <ion-input class="password" [type]="passwordType" placeholder="Senha" [(ngModel)]="user.senha"></ion-input>
+          <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+        </ion-item>
+    
+        <div text-center style="margin-top: 2.5rem">
           <button ion-button secondary class="login-button" (click)="fazerLogin()" full>Entrar</button>
-      </div>
-  
-    </ion-list>
+        </div>
+    
+      </ion-list>
   
   </ion-content>
