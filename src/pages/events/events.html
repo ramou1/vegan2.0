@@ -6,15 +6,15 @@
 
 <ion-content padding>
 
-    <ion-card>
+    <ion-card *ngFor="let evento of eventos" (click)="abrirEvento(evento)">
       
-        <img src="../assets/imgs/advance-card-bttf.png">
+        <img src="../assets/imgs/{{evento.foto ? evento.foto : 'event-default.png'}}">
       
         <ion-card-content text-center>
-          <h3><strong>evento</strong></h3>
-          <p>são josé dos campos</p>
-          <p>16/08/2019</p>
-          <p>12 confirmados</p>
+          <h3><strong>{{evento.nome}}</strong></h3>
+          <p>{{evento.local}}</p>
+          <p>{{evento.data}}</p>
+          <p>{{evento.confirmados}} confirmados</p>
         </ion-card-content>
     
       </ion-card>

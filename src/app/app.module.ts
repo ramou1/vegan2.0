@@ -20,6 +20,8 @@ import { UtilsProvider } from '../providers/utils/utils';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { ProfileEditPage } from '../pages/profile-edit/profile-edit';
+import { EventDetailsPage } from '../pages/event-details/event-details';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,10 @@ import { IonicStorageModule } from '@ionic/storage';
     HomePage,
     RecipesPage,
     EventsPage,
+    EventDetailsPage,
     MapPage,
     ProfilePage,
+    ProfileEditPage,
     TabsPage
   ],
   imports: [
@@ -49,8 +53,10 @@ import { IonicStorageModule } from '@ionic/storage';
     HomePage,
     RecipesPage,
     EventsPage,
+    EventDetailsPage,
     MapPage,
     ProfilePage,
+    ProfileEditPage,
     TabsPage
   ],
   providers: [

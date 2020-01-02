@@ -38,8 +38,8 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
 
-    this.user.usuario = 'responsavel';
-    this.user.senha = 'ikxr38';
+    this.user.usuario = 'admin';
+    this.user.senha = '12345';
 
   }
 

@@ -11,26 +11,26 @@
 
 <ion-content padding>
 
-    <img src="../assets/imgs/advance-card-bttf.png" />
+  <div class="capa"><img src="../assets/imgs/{{user.bg_picture ? user.bg_picture : 'bg-picture-default.png'}}" /></div>
 
   <ion-grid>
     <ion-row>
       <ion-col col-3 class="align-vertical">
         <ion-item> 
           <ion-avatar item-start>
-            <img src="../assets/imgs/{{this.condutor.foto}}">
+            <img src="../assets/imgs/{{user.profile_picture ? user.profile_picture : 'profile-picture-default.png'}}">
           </ion-avatar>
         </ion-item>
       </ion-col>
       <ion-col col-7 class="align-vertical">
         <div style="margin-left: -35px !important;">
-          <h6>{{this.condutor.nome}}</h6>
-          <ion-note>{{this.condutor.empresa}}</ion-note>
+          <h6>{{user.nome}}</h6>
+          <ion-note>{{user.bio ? user.bio : ''}}</ion-note>
         </div>
       </ion-col>
       <ion-col col-2 class="align-vertical">
-        <div><ion-icon name="md-create" item-end color="secondary"></ion-icon></div>
-        <!-- <div><img src="../assets/imgs/Editar@2x.png" style="width: 70%;" (click)="editarPerfil()"></div> -->
+        <div><ion-icon name="md-create" item-end color="secondary" (click)="editarPerfil()"></ion-icon></div>
+        <!-- <div><img src="../assets/imgs/Editar@2x.png" style="width: 70%;"></div> -->
       </ion-col>
     </ion-row>
   </ion-grid>
