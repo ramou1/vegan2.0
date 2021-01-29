@@ -5,8 +5,8 @@ Segunda versão do Aplicativo de Rede Social para o público vegetariano e vegan
 Baixe a última versão apk do projeto [aqui.](https://github.com/ramou1/vegan2.0/raw/master/veggie.apk)
 
 ## O que o app faz?
-:herb: Criar, editar e acessar seu perfil pessoal;
-:herb: Adicione amigos e conhecer novas pessoas para compartilhar experiências e conhecimento;
+:herb: Criar, editar e acessar seu perfil pessoal; <br />
+:herb: Adicione amigos e conhecer novas pessoas para compartilhar experiências e conhecimento;<br />
 :herb: Criar e encontrar eventos na sua região; <br />
 :herb: Publique e encontre receitas; <br />
 :herb: Encontre restaurantes vegetarianos e veganos próximos. <br>
